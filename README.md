@@ -48,6 +48,12 @@ Você também precisará fazer a mesma alteração nos arquivos de `deployment.y
 
 Execute o script para construir as imagens Docker e enviá-las para o Docker Hub.
 
+Dê permissão de execução: No seu terminal, execute o seguinte comando para tornar o script executável:
+
+    chmod +x script.sh
+    
+Execute o script:
+
 **No Windows:** ./script.bat
 
 **No Linux/macOS:** ./script.sh
