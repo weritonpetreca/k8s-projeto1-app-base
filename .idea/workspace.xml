@@ -4,15 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d3dde20a-9f41-48ef-a404-19d2e15c3418" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/backend/dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/sql.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deployment.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/script.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/conexao.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/conexao.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/js.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/js.js" afterDir="false" />
+    <list default="true" id="d3dde20a-9f41-48ef-a404-19d2e15c3418" name="Changes" comment="chore: projeto backend kubernetes">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +15,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "weritonpetreca"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/weritonpetreca/k8s-projeto1-app-base.git",
+    "accountId": "5f5522aa-a9b5-4659-aa1b-fc9762ca9803"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -64,6 +69,19 @@
       <option name="presentableId" value="Default" />
       <updated>1752333484636</updated>
     </task>
+    <task id="LOCAL-00001" summary="chore: projeto backend kubernetes">
+      <option name="closed" value="true" />
+      <created>1752336899776</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1752336899776</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="chore: projeto backend kubernetes" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: projeto backend kubernetes" />
   </component>
 </project>

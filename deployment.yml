@@ -3,7 +3,7 @@ kind: PersistentVolumeClaim
 metadata:
   name: mysql-dados
 spec:
-  acessModes:
+  accessModes:
     - ReadWriteOnce
   resources:
     requests:
@@ -47,7 +47,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: php
-  labesl:
+  labels:
     app: php
 spec:
   replicas: 6
