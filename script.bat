@@ -1,20 +1,38 @@
-echo "Criando as imagens..."
+@echo off
+setlocal
 
-docker build -t weritonpetreca/projeto-backend:1.0 backend/.
-docker build -t weritonpetreca/projeto-database:1.0 database/.
+rem --- Variaveis ---
+rem IMPORTANTE: Altere "weritonpetreca" para o seu nome de usuario no Docker Hub
+set DOCKER_USER=weritonpetreca
+set VERSION=1.0
 
-echo "Imagens criadas com sucesso!"
-echo "Realizando o push das imagens..."
+echo.
+echo => Construindo as imagens Docker...
+docker build -t %DOCKER_USER%/projeto-backend:%VERSION% backend/. || exit /b
+docker build -t %DOCKER_USER%/projeto-database:%VERSION% database/. || exit /b
+echo => Imagens construidas com sucesso!
+echo.
 
-docker push weritonpetreca/projeto-backend:1.0
-docker push weritonpetreca/projeto-database:1.0
+rem --- Push para o Docker Hub ---
+echo => Enviando as imagens para o Docker Hub...
+docker push %DOCKER_USER%/projeto-backend:%VERSION% || exit /b
+docker push %DOCKER_USER%/projeto-database:%VERSION% || exit /b
+echo => Push realizado com sucesso!
+echo.
 
-echo "Push realizado com sucesso!"
-echo "Criando serviços no cluster Kubernetes..."
+rem --- Aplicacao dos Manifestos Kubernetes ---
+echo => Aplicando os manifestos no cluster Kubernetes...
 
-kubectl apply -f ./services.yaml
+echo --> Criando os Services...
+kubectl apply -f ./services.yml || exit /b
 
-echo "Serviços criados com sucesso!"
-echo "Criando os deployments no cluster Kubernetes..."
+echo --> Criando os Deployments e o PVC...
+kubectl apply -f ./deployment.yml || exit /b
 
-kubectl apply -f ./deployments.yaml
+echo.
+echo => Aplicacao implantada com sucesso!
+echo.
+echo Para verificar o status, execute: kubectl get all
+echo Para obter o IP de acesso, execute: kubectl get services php
+
+endlocal
